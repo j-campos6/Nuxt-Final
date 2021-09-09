@@ -23,12 +23,24 @@
 
 <script>
 export default {
+  head: {
+  title: 'Travel Junkies home page',  
+  titleTemplate: '%s - Nuxt.js',
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+
+    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+    { hid: 'description', name: 'description', content: 'Top 2 world travel destinations of the week' }
+    ]
+  },
   name: 'HomePage',
   props: {
     msg: String
   },
 //repeated content below to be shown in html using v-for (see above card in the html)
   data() {
+
     return {
       cards: [{
           url: require('../assets/1.png'),
